@@ -18,7 +18,7 @@ multiple devices of the user along with centralized logging.
 1. Go to **waartaa**'s repository directory just cloned: ``$ cd waartaa``
 1. Run setup script: ``$ ./setup.sh``
 1. Customize ``waartaa/server/settings-local.js`` as needed.
-1. Go to waartaa meteor project's directory: ``$ cd waartaa``
+1. Go to waartaa meteor project's directory: ``$ cd app``
 1. Run waartaa: ``$ meteor``
 
 
@@ -47,12 +47,28 @@ multiple devices of the user along with centralized logging.
 
 ### Deployment
 
-**Coming soon**
+1. Install ``ansible`` for your distribution.
+   - Fedora (or CentOS): ``sudo yum install ansible``
+   - Ubuntu: ``sudo apt-get install ansible``
+1. ``cd deploy``
+1. Copy ``hosts`` to say ``hosts.local`` and customize as needed.
+1. Provision and deploy: ``./bundle; ansible-playbook -i hosts.local site.yml``
+1. Only deploy: ``./bundle; ansible-playbook -i hosts.local site.yml``
 
 
 ## Contribute
 
 1. Setup and run **waartaa** locally.
 2. Report bugs or submit feature requests at https://github.com/waartaa/waartaa/issues/new.
-3. Feel free to pick up open issues from https://github.com/waartaa/waartaa/issues?milestone=1&state=open. Don't hesitate to ask for help.
+3. Feel free to pick up open issues from https://github.com/waartaa/waartaa/issues?state=open. Don't hesitate to ask for help.
+
+
+## Comunicate
+
+1. Mailing list: https://groups.google.com/forum/#!forum/waartaa
+1. IRC: **#waartaa** on Freenode
+
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/waartaa/waartaa/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 

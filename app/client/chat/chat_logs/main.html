@@ -1,0 +1,15 @@
+<template name="chat_main">
+<div id="chat-main" class="{{#if isCurrentRoomtype "server"}}col-md-10 col-sm-12{{else}}col-md-8 col-sm-9{{/if}} col-xs-12 drawer drawer-main-content">
+  {{#if isCurrentRoomtype "channel"}}
+    {{> channel_logs}}
+  {{else}}
+    {{#if isCurrentRoomtype "server"}}
+      {{> server_logs}}
+    {{else}}
+      {{#if isCurrentRoomtype "pm"}}
+        {{> pm_logs}}
+      {{/if}}
+    {{/if}}
+  {{/if}}
+</div>
+</template>
